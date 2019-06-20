@@ -1,10 +1,11 @@
 
-const exec = require("child_process").exec;
+// const exec = require("child_process").exec;
+const querystring = require("querystring");
 
 function start(response, postData) {
     console.log("Request handler 'start' was called.");
 
-    var body = '<html>'+
+    const body = '<html>'+
     '<head>'+
     '<meta http-equiv="Content-Type" content="text/html; '+
     'charset=UTF-8" />'+
@@ -22,8 +23,6 @@ function start(response, postData) {
     response.end();
 
 }
-
-
 
 function upload(response, postData) {
     console.log("Request handler 'upload' was called.");
